@@ -1,6 +1,7 @@
 require("iuplua")
 require("iupluacontrols")
 require("iuplua_pplot")
+require("nmea")
 
 mnu = iup.menu
 {
@@ -101,9 +102,9 @@ dlg = iup.dialog
             {
                 iup.multiline
                 {
-                    expand="yes", 
-                    readonly="yes", 
-                    bgcolor="232 232 232", 
+                    expand = "yes", 
+                    readonly = "yes", 
+                    bgcolor = "232 232 232", 
                     font = "Monospace, 10",
                     appendnewline = "No",
                 },
@@ -113,9 +114,9 @@ dlg = iup.dialog
             {
                 iup.multiline
                 {
-                    expand="yes", 
-                    readonly="yes", 
-                    bgcolor="232 232 232", 
+                    expand = "yes", 
+                    readonly = "yes", 
+                    bgcolor = "232 232 232", 
                     font = "Monospace, 10",
                     appendnewline = "No"
                 },
