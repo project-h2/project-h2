@@ -1,0 +1,10 @@
+avrdude -p atmega1284p -P com3 -c avrisp -b 19200 -v -v
+avrdude -p atmega1284p -P com3 -c avrisp -b 19200 -v -v -Uflash:w:blink.hex
+
+
+wrong fuses!
+avrdude -p m328p -b 19200 -P COM3 -c avrisp -v -v -U lock:w:0x3F:m -U hfuse:w:0xD8:m -U lfuse:w:0xFF:m -U efuse:w:0x03:m
+
+avr-gcc -o blink.elf -mmcu=atmega1284p -Os blink.c
+
+avr-objcopy -j .text -j .data -O ihex blink.elf blink.hex
